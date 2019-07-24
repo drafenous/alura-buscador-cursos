@@ -1,0 +1,38 @@
+{
+    "name": "drafenous/busca-cursos",
+    "description": "Buscador de Cursos para aprendizado da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rodrigo R. Almeida",
+            "email": "rodrigo.roberto.almeida@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.3",
+        "symfony/css-selector": "^4.3"
+    },
+    "autoload": {
+        "psr-4":{
+            "Alura\\BuscadorDeCursos\\": "src/"
+        },
+        "files": ["./functions.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^2.2"
+    },
+    "scripts": {
+        "phan": "phan --allow-polyfill-parser",
+        "phpcs": "phpcs --standard=PSR12 src/",
+        "check": [
+            "@phan",
+            "@phpcs"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda o comando Check, que executa as verificações Phan e PHPCS."
+    }
+}
