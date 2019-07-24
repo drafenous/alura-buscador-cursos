@@ -34,5 +34,7 @@
     },
     "scripts-descriptions": {
         "check": "Roda o comando Check, que executa as verificações Phan e PHPCS."
-    }
+    },
+    "license": "GPL-3.0",
+    "bin": ["index.php"]
 }
